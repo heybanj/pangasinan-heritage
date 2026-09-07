@@ -1,5 +1,3 @@
-import NextImage from "next/image";
-
 type ImageProps = {
   src: string;
   alt: string;
@@ -11,12 +9,15 @@ export default function Image({
   alt,
   className = "",
 }: ImageProps) {
+  const imageSrc =
+    process.env.NODE_ENV === "production" && src.startsWith("/")
+      ? `/pangasinan-heritage${src}`
+      : src;
+
   return (
-    <NextImage
-      src={src}
+    <img
+      src={imageSrc}
       alt={alt}
-      width={1200}
-      height={800}
       className={`w-full object-cover ${className}`}
     />
   );
