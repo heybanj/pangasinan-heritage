@@ -4,8 +4,17 @@ import { useState } from "react";
 import NavigationItem from "../molecules/NavigationItem";
 import Icon from "../atoms/Icon";
 
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? "/pangasinan-heritage"
+    : "";
+
 export default function HeaderNavigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <header className="border-b border-gray-200 bg-white">
@@ -13,21 +22,18 @@ export default function HeaderNavigation() {
 
         {/* Logo */}
         <a
-          href="/"
+          href={`${basePath}/`}
+          onClick={closeMenu}
           className="text-xl font-bold text-green-800"
         >
           Pangasinan Heritage
         </a>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <button
           type="button"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={
-            menuOpen
-              ? "Close menu"
-              : "Open menu"
-          }
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           className="rounded-md p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-600 md:hidden"
         >
@@ -41,17 +47,17 @@ export default function HeaderNavigation() {
         >
           <NavigationItem
             label="Home"
-            href="/"
+            href={`${basePath}/`}
           />
 
           <NavigationItem
             label="Heritage Sites"
-            href="/#heritage"
+            href={`${basePath}/#heritage`}
           />
 
           <NavigationItem
             label="About"
-            href="/#about"
+            href={`${basePath}/#about`}
           />
         </nav>
       </div>
@@ -63,20 +69,22 @@ export default function HeaderNavigation() {
           className="border-t border-gray-100 px-4 py-4 md:hidden"
         >
           <div className="flex flex-col gap-4">
+
             <NavigationItem
               label="Home"
-              href="/"
+              href={`${basePath}/`}
             />
 
             <NavigationItem
               label="Heritage Sites"
-              href="/#heritage"
+              href={`${basePath}/#heritage`}
             />
 
             <NavigationItem
               label="About"
-              href="/#about"
+              href={`${basePath}/#about`}
             />
+
           </div>
         </nav>
       )}
