@@ -4,11 +4,6 @@ import { useState } from "react";
 import NavigationItem from "../molecules/NavigationItem";
 import Icon from "../atoms/Icon";
 
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? "/pangasinan-heritage"
-    : "";
-
 export default function HeaderNavigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,7 +17,7 @@ export default function HeaderNavigation() {
 
         {/* Logo */}
         <a
-          href={`${basePath}/`}
+          href="/pangasinan-heritage/"
           onClick={closeMenu}
           className="text-xl font-bold text-green-800"
         >
@@ -47,17 +42,17 @@ export default function HeaderNavigation() {
         >
           <NavigationItem
             label="Home"
-            href={`${basePath}/`}
+            href="/pangasinan-heritage/"
           />
 
           <NavigationItem
             label="Heritage Sites"
-            href={`${basePath}/#heritage`}
+            href="/pangasinan-heritage/#heritage"
           />
 
           <NavigationItem
             label="About"
-            href={`${basePath}/#about`}
+            href="/pangasinan-heritage/#about"
           />
         </nav>
       </div>
@@ -69,22 +64,20 @@ export default function HeaderNavigation() {
           className="border-t border-gray-100 px-4 py-4 md:hidden"
         >
           <div className="flex flex-col gap-4">
-
             <NavigationItem
               label="Home"
-              href={`${basePath}/`}
+              href="/pangasinan-heritage/"
             />
 
             <NavigationItem
               label="Heritage Sites"
-              href={`${basePath}/#heritage`}
+              href="/pangasinan-heritage/#heritage"
             />
 
             <NavigationItem
               label="About"
-              href={`${basePath}/#about`}
+              href="/pangasinan-heritage/#about"
             />
-
           </div>
         </nav>
       )}
