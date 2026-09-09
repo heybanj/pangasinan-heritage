@@ -122,12 +122,7 @@ export default async function DestinationPage({
             Pangasinan Heritage
           </Link>
 
-          <Link
-            href="/#heritage"
-            className="font-medium text-gray-600 transition hover:text-green-700 focus:outline-none focus:ring-2 focus:ring-green-600"
-          >
-            ← Back to Explore
-          </Link>
+        
 
         </div>
       </header>
