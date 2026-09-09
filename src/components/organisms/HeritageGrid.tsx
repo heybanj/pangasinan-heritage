@@ -34,6 +34,26 @@ const heritageSites = [
       "Relax and experience the refreshing waters of Balungao while enjoying the peaceful surrounding landscape.",
     image: "/images/balungao-hot-spring.jpg",
   },
+
+  {
+    title: "Manaoag Church",
+    slug: "manaoag-church",
+    location: "Manaoag, Pangasinan",
+    category: "Religious Heritage",
+    description:
+      "Visit the historic Basilica of Our Lady of the Rosary of Manaoag, one of Pangasinan's most well-known religious landmarks.",
+    image: "/images/manaoag-church.jpg",
+  },
+
+  {
+    title: "Pangasinan Provincial Capitol",
+    slug: "pangasinan-provincial-capitol",
+    location: "Lingayen, Pangasinan",
+    category: "Historical Landmark",
+    description:
+      "Explore the historic Pangasinan Provincial Capitol in Lingayen, an important landmark representing the province's history and government heritage.",
+    image: "/images/pangasinan-capitol.jpg",
+  },
 ];
 
 export default function HeritageGrid() {

@@ -52,6 +52,36 @@ const destinations = {
       "Popular local attraction",
     ],
   },
+
+  "manaoag-church": {
+    title: "Manaoag Church",
+    location: "Manaoag, Pangasinan",
+    category: "Religious Heritage",
+    image: `${basePath}/images/manaoag-church.jpg`,
+    description:
+      "The Basilica of Our Lady of the Rosary of Manaoag is one of the most recognized religious landmarks in Pangasinan. It is an important destination for visitors interested in the province's religious and cultural heritage.",
+    highlights: [
+      "Historic religious landmark",
+      "Important cultural heritage site",
+      "Known pilgrimage destination",
+      "Beautiful church architecture",
+    ],
+  },
+
+  "pangasinan-provincial-capitol": {
+    title: "Pangasinan Provincial Capitol",
+    location: "Lingayen, Pangasinan",
+    category: "Historical Landmark",
+    image: `${basePath}/images/pangasinan-capitol.jpg`,
+    description:
+      "The Pangasinan Provincial Capitol is a significant landmark in Lingayen and serves as an important symbol of the province's history, government, and heritage.",
+    highlights: [
+      "Historic government landmark",
+      "Located in Lingayen",
+      "Important provincial heritage site",
+      "Notable architectural landmark",
+    ],
+  },
 };
 
 export function generateStaticParams() {
