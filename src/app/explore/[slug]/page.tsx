@@ -2,12 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? "/pangasinan-heritage"
+    : "";
+
 const destinations = {
   "hundred-islands": {
     title: "Hundred Islands",
     location: "Alaminos City, Pangasinan",
     category: "Natural Heritage",
-    image: "/images/hundred-islands.jpg",
+    image: `${basePath}/images/hundred-islands.jpg`,
     description:
       "Hundred Islands is one of Pangasinan's most recognizable natural attractions. It features numerous islands and islets surrounded by clear coastal waters and distinctive limestone formations.",
     highlights: [
@@ -22,7 +27,7 @@ const destinations = {
     title: "Bolinao Lighthouse",
     location: "Bolinao, Pangasinan",
     category: "Historical Landmark",
-    image: "/images/bolinao-lighthouse.jpg",
+    image: `${basePath}/images/bolinao-lighthouse.jpg`,
     description:
       "Bolinao Lighthouse is one of the notable landmarks of Bolinao. Its elevated location provides visitors with scenic views of the surrounding coastline and the West Philippine Sea.",
     highlights: [
@@ -37,7 +42,7 @@ const destinations = {
     title: "Balungao Hot Spring",
     location: "Balungao, Pangasinan",
     category: "Natural Attraction",
-    image: "/images/balungao-hot-spring.jpg",
+    image: `${basePath}/images/balungao-hot-spring.jpg`,
     description:
       "Balungao Hot Spring is a popular natural attraction where visitors can relax and enjoy its refreshing waters while experiencing the peaceful surroundings of Balungao.",
     highlights: [
